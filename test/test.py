@@ -4,7 +4,7 @@ class TestStringMethods(unittest.TestCase):
 
     def test_upper(self):
         # 加个注释，测试Jenkins PCM
-        self.assertEqual('foo'.upper(), 'FOOx')
+        self.assertEqual('foo'.upper(), 'FOO')
 
     def test_isupper(self):
         self.assertTrue('FOO'.isupper())

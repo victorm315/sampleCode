@@ -3,15 +3,15 @@ pipeline {
   stages {
     stage('Preparation') {
       parallel {
-        stage('Preparation') {
+        stage('first') {
           agent {
             node {
-              label 'mac_node'
+              label 'Mac'
             }
             
           }
           steps {
-            git 'https://github.com/AliceCodeZhang/sampleCode.git'
+            git 'git@github.com:victorm315/sampleCode.git'
           }
         }
         stage('second') {
@@ -41,7 +41,7 @@ pipeline {
         }
         stage('node 2') {
           agent {
-            label 'mac_node'
+            label 'Mac'
           }
           steps {
               sh 'pwd'
